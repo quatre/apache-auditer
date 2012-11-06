@@ -4,7 +4,7 @@ import logging
 import os
 import glob
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 class ApacheConf(object):
@@ -99,4 +99,5 @@ def report(conf):
 if __name__ == "__main__":
     apacheconf = ApacheConf()
     apacheconf.parse_file(apacheconf.config_path)
+    report(apacheconf)
 
